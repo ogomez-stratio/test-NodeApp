@@ -25,9 +25,9 @@ pipeline {
                 echo 'Start push image to repo'
 
                 script {
-                  def props = readJSON file: 'package.json'
-                  def buildversion = props.version + '.build-' + env.BUILD_NUMBER
-                  echo dockerBuilder('','test-node-app','ogomezstratio','og1108al',buildversion)
+                  // def props = readJSON file: 'package.json'
+                  // def buildversion = props.version + '.build-' + env.BUILD_NUMBER
+                  echo dockerBuilder('','test-node-app','ogomezstratio','og1108al','1.0.0')
                 }
 
                 echo 'End push image to repo'
