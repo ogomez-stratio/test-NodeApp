@@ -25,7 +25,7 @@ pipeline {
                 echo 'Start push image to repo'
 
                 script {
-                  echo dockerBuilder('','testNodeApp','ogomezstratio','og1108al')
+                  echo dockerBuilder('','test-node-app','ogomezstratio','og1108al')
                     // def props = readJSON file: 'package.json'
                     // def buildversion = props.version + '.build-' + env.BUILD_NUMBER
                     // sh 'docker login sania.azurecr.io -u $ACRCRED_USR -p $ACRCRED_PSW'
