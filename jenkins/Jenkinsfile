@@ -25,12 +25,9 @@ pipeline {
                 echo 'Start push image to repo'
 
                 script {
-                  echo dockerBuilder('','test-node-app','ogomezstratio','og1108al')
-                    // def props = readJSON file: 'package.json'
-                    // def buildversion = props.version + '.build-' + env.BUILD_NUMBER
-                    // sh 'docker login sania.azurecr.io -u $ACRCRED_USR -p $ACRCRED_PSW'
-                    // sh 'docker tag sanitas-dental-bot-clinics sania.azurecr.io/sanitas-dental-bot-clinics:' + buildversion
-                    // sh 'docker push sania.azurecr.io/sanitas-dental-bot-clinics:' + buildversion
+                  def props = readJSON file: 'package.json'
+                  def buildversion = props.version + '.build-' + env.BUILD_NUMBER
+                  echo dockerBuilder('','test-node-app','ogomezstratio','og1108al',buildversion)
                 }
 
                 echo 'End push image to repo'
