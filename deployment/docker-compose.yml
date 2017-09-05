@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+
+  clinics-service-db:
+    image: mongo:latest
+    container_name: clinics-service-db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=sanitas
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    ports:
+      - "27017:27017"
+    networks:
+      sanitas-bot-network:
+        ipv4_address: 10.5.0.10
+
+  clinics-service:
+    image: sanitas-dental-bot-clinics
+    container_name: clinics-service
+    ports:
+      - '9002:9002'
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - clinics-service-db
+    links:
+      - clinics-service-db
+    networks:
+      sanitas-bot-network:
+        ipv4_address: 10.5.0.7
+
+networks:
+  sanitas-bot-network:
+    external:
+      name: sanitas-bot-network
+

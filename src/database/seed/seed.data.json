@@ -1,0 +1,90 @@
+{
+  "clinics": {
+    "_model": "clinic",
+    "plazadegalicia": {
+      "entity": "plazadegalicia",
+      "name": "Clínica Dental Milenium Plaza de Galicia.",
+      "address": "Calle Arzobispo Lago 8 Bajo",
+      "city": "coruña",
+      "province": {
+        "id": "coruña",
+        "name": "La Coruña"
+      },
+      "postalCode": "15004",
+      "nearbyPostalCodes": [ "15004", "15003", "15002", "15005", "15006", "15007", "15011" ],
+      "web": "http://clinicadental-acoruna.sanitas.es/",
+      "schedule": {
+        "lunes": "9:00 a 21:00",
+        "martes": "9:00 a 21:00",
+        "miercoles": "9:00 a 21:00",
+        "jueves": "9:00 a 21:00",
+        "viernes": "9:00 a 21:00"
+      },
+      "emergencySchedule": "Urgencias solo en horario de consulta."
+    },
+    "gaztambide": {
+      "entity": "gaztambide",
+      "name": "Clínica Dental Milenium Gaztambide.",
+      "address": "Calle de Gaztambide 31",
+      "city": "madrid",
+      "province": {
+        "id": "madrid",
+        "name": "Madrid"
+      },
+      "postalCode": "28015",
+      "nearbyPostalCodes": [ "28015", "28004", "28013", "28008", "28040", "28010", "28003" ],
+      "web": "http://clinicadental-moncloa.sanitas.es/",
+      "schedule": {
+        "lunes": "9:00 a 21:00",
+        "martes": "9:00 a 21:00",
+        "miercoles": "9:00 a 21:00",
+        "jueves": "9:00 a 21:00",
+        "viernes": "9:00 a 21:00",
+        "sabado": "10:00 a 22:00"
+      },
+      "emergencySchedule": "Urgencias solo en horario de consulta."
+    },
+    "montecarmelo": {
+      "entity": "montecarmelo",
+      "name": "Clínica Dental Milenium Montecarmelo.",
+      "address": "Avenida de Montecarmelo 7-9",
+      "city": "madrid",
+      "province": {
+        "id": "madrid",
+        "name": "Madrid"
+      },
+      "postalCode": "28049",
+      "nearbyPostalCodes": [ "28049", "28035", "28034", "28050", "28108", "28109", "28055" ],
+      "web": "http://clinicadental-montecarmelo.sanitas.es/",
+      "schedule": {
+        "lunes": "9:00 a 21:00",
+        "martes": "9:00 a 21:00",
+        "miercoles": "9:00 a 21:00",
+        "jueves": "9:00 a 21:00",
+        "viernes": "9:00 a 21:00"
+      },
+      "emergencySchedule": "Urgencias solo en horario de consulta."
+    },
+    "rogerdeflor": {
+      "entity": "rogerdeflor",
+      "name": "Clínica Dental Milenium Roger de Flor.",
+      "address": "Avenida Diagonal 313",
+      "city": "barcelona",
+      "province": {
+        "id": "barcelona",
+        "name": "Barcelona"
+      },
+      "postalCode": "08009",
+      "nearbyPostalCodes": ["08009", "08010", "08007", "08037", "08013", "08025" ],
+      "web": "http://clinicadental-verdaguer.sanitas.es/",
+      "schedule": {
+        "lunes": "9:00 a 21:00",
+        "martes": "9:00 a 21:00",
+        "miercoles": "9:00 a 21:00",
+        "jueves": "9:00 a 21:00",
+        "viernes": "9:00 a 21:00"
+      },
+      "emergencySchedule": "Urgencias solo en horario de consulta."
+    }
+  }
+}

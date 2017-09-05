@@ -1,0 +1,70 @@
+@Library('jenkinslib') _
+
+pipeline {
+    agent any
+    // environment {
+    // //   ACRCRED = credentials('sania_azure_container_registry')
+    //
+    // }
+       stages {
+        //       stage('build') {
+        //           steps {
+        //             script {
+        //               echo "prueba con echo de la llamada"
+        //               echo pwd
+        //               echo yarnBuilder()
+        //             }
+        //         }
+        //   }
+
+        stage('publish untagged build') {
+            when {
+                expression { env.TAG_NAME == null || !(env.TAG_NAME ==~ /^v\d+\.\d+\.\d+$/) }
+            }
+            steps {
+                echo 'Start push image to repo'
+
+                script {
+                  echo dockerBuilder('','sanitas-dental-bot-clinics','ogomezstratio','og1108al')
+                    // def props = readJSON file: 'package.json'
+                    // def buildversion = props.version + '.build-' + env.BUILD_NUMBER
+                    // sh 'docker login sania.azurecr.io -u $ACRCRED_USR -p $ACRCRED_PSW'
+                    // sh 'docker tag sanitas-dental-bot-clinics sania.azurecr.io/sanitas-dental-bot-clinics:' + buildversion
+                    // sh 'docker push sania.azurecr.io/sanitas-dental-bot-clinics:' + buildversion
+                }
+
+                echo 'End push image to repo'
+            }
+        }
+
+        // stage('publish tagged release') {
+        //     when {
+        //         expression { env.TAG_NAME ==~ /^v\d+\.\d+\.\d+$/ }
+        //     }
+        //     steps {
+        //         echo 'Start push image to repo'
+        //
+        //         script {
+        //             def buildversion = env.TAG_NAME
+        //             sh 'docker login sania.azurecr.io -u $ACRCRED_USR -p $ACRCRED_PSW'
+        //             sh 'docker tag sanitas-dental-bot-clinics sania.azurecr.io/sanitas-dental-bot-clinics:' + buildversion
+        //             sh 'docker push sania.azurecr.io/sanitas-dental-bot-clinics:' + buildversion
+        //         }
+        //
+        //         echo 'End push image to repo'
+        //     }
+        // }
+    }
+
+    post {
+        success {
+            echo("correcto")
+            //slackSend (channel: '#datalake-jenkins', color: '#00FF00', message: 'SUCCESSFUL \n\t Build Number: ' + env.BUILD_NUMBER + '\n\t Job: ' + env.JOB_NAME + '\n\t Build Url: ' + env.BUILD_URL)
+        }
+
+        failure {
+            echo("error")
+            //slackSend (channel: '#datalake-jenkins', color: '#FF0000', message: 'FAILURE \n\t Build Number: ' + env.BUILD_NUMBER + '\n\t Job: ' + env.JOB_NAME + '\n\t Build Url: ' + env.BUILD_URL)
+        }
+    }
+}
