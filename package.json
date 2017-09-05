@@ -1,6 +1,6 @@
 {
   "name": "clinicService",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Clinic service using seneca",
   "main": "index.js",
   "author": "Plain Concepts WPT",
