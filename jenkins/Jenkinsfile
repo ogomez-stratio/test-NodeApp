@@ -64,4 +64,4 @@ nodePipeline()
 //             //slackSend (channel: '#datalake-jenkins', color: '#FF0000', message: 'FAILURE \n\t Build Number: ' + env.BUILD_NUMBER + '\n\t Job: ' + env.JOB_NAME + '\n\t Build Url: ' + env.BUILD_URL)
 //         }
 //     }
-}
+//}
