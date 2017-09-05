@@ -1,6 +1,6 @@
 @Library('jenkinslib') _
 
-nodePipeline()
+nodePipeline
 // pipeline {
 //     agent any
 //     // environment {
