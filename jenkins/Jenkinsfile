@@ -5,6 +5,7 @@ nodePipeline{
   containerName = 'test-node-app'
   dockerUser = 'ogomezstratio'
   dockerPassword = 'og1108al'
+  ACRCredentials = 'docker-credentials'
 }
 // pipeline {
 //     agent any
