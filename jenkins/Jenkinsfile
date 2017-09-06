@@ -1,6 +1,11 @@
 @Library('jenkinslib') _
 
-nodePipeline{}
+nodePipeline{
+  dockerRepo = ''
+  containerName = 'test-node-app'
+  dockerUser = 'ogomezstratio'
+  dockerPassword = 'og1108al'
+}
 // pipeline {
 //     agent any
 //     // environment {
