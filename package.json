@@ -25,7 +25,11 @@
         "start:prod": "yarn build && set NODE_ENV=production && node ./build/src/index.js"
     },
     "repository": "https://plainconcepts.visualstudio.com/DefaultCollection/SanitasDental.Bot/_git/SanitasDental.Bot.ClinicsService",
+<<<<<<< HEAD
     "version": "2.0.0",
+=======
+    "version": "1.0.4.build-167",
+>>>>>>> 721186336295dc9d37cd26efe63f6a1598b315f4
     "dependencies": {
         "lodash": "^4.17.4",
         "mongoose": "^4.10.5",
