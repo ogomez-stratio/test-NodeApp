@@ -6,4 +6,5 @@ nodePipeline{
   registryCredentialsId = 'docker-credentials'
   gitRepo = 'github.com/ogomezstratio/test-NodeApp.git'
   gitCredentials = 'ogomezStratio'
+  
 }
